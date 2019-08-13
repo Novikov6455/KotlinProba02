@@ -1,20 +1,22 @@
+import org.junit.Test
 import java.lang.reflect.Parameter
 import kotlin.math.*
 import java.lang.Math.*
+import kotlin.test.assertEquals
 
 /**
  Kotlin Coding project
  */
-fun main(parameter: Array <String>) {
-    print("Enter NUMBER :")
-    val n = readLine()!!.toInt()
-    //println("For n = $n Factorial($n) = ${factorial(n)}")
-    //println("For n = $n Fibonacci($n) = ${fibonacci(n)}")
-    //println("For n = $n Fibonacci2($n) = ${fibonacci2(n)}")
-    println("For n = $n Fibonacci3($n) = ${fibonacci3(n)}")
-    //println("For n = $n digitNunber($n) = ${digitNumber(n)}")
-    println("Good Luck")
-}
+//fun main(parameter: Array <String>) {
+//    print("Enter NUMBER :")
+//    val n = readLine()!!.toInt()
+//    //println("For n = $n Factorial($n) = ${factorial(n)}")
+//    println("For n = $n Fibonacci($n) = ${fibonacci(n)}")
+//    //println("For n = $n Fibonacci2($n) = ${fibonacci2(n)}")
+//    println("For n = $n Fibonacci3($n) = ${fibonacci3(n)}")
+//    //println("For n = $n digitNunber($n) = ${digitNumber(n)}")
+//    println("Good Luck")
+//}
 /*** Factorial  ***************************************************************/
 fun factorial(n: Int): Double =
         if (n <= 1) 1.0
@@ -64,3 +66,49 @@ fun digitNumber(n: Int): Int {
     return i
 }
 
+class Tests {
+    @Test
+    fun factorialTest(){
+        assertEquals(1.0, factorial(0))
+        assertEquals(1.0, factorial(1))
+        assertEquals(2.0, factorial(2))
+        assertEquals(6.0, factorial(3))
+        assertEquals(24.0, factorial(4))
+    }
+    @Test
+            /** Fibonacci : 1, 1, 2, 3, 5, 8, 13 */
+    fun fibonacciTest() {
+        assertEquals(1, fibonacci(1))
+        assertEquals(1, fibonacci(2))
+        assertEquals(2, fibonacci(3))
+        assertEquals(0, fibonacci(0))
+        assertEquals(13, fibonacci(7))
+    }
+    @Test
+    fun fibonacci2Test() {
+        assertEquals(1, fibonacci2(1))
+        assertEquals(1, fibonacci2(2))
+        assertEquals(2, fibonacci2(3))
+        assertEquals(0, fibonacci2(0))
+        assertEquals(13, fibonacci2(7))
+    }
+    @Test
+    fun fibonacci3Test() {
+        assertEquals(1, fibonacci3(1))
+        assertEquals(1, fibonacci3(2))
+        assertEquals(2, fibonacci3(3))
+        assertEquals(0, fibonacci3(0))
+        assertEquals(13, fibonacci3(7))
+    }
+    @Test
+    fun digitNumberTest() {
+        assertEquals(1, digitNumber(0))
+        assertEquals(1, digitNumber(1))
+        assertEquals(2, digitNumber(10))
+        assertEquals(3, digitNumber(100))
+        assertEquals(3, digitNumber(101))
+        assertEquals(3, digitNumber(901))
+        assertEquals(10, digitNumber(1111111901))
+    }
+
+}

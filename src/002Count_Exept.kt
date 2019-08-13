@@ -6,7 +6,7 @@ fun main(parameter: Array <String>) {
 	var average = 0.0
 	var inpDig: Double = 0.0
 while (true){
-	print("Enter NUMBER or 'Done' for exit:")
+	print("Enter NUMBER or 'Done' for exit: ")
 	val inp = readLine()
 	if (inp == "Done")  {print("Done"); break}
 
