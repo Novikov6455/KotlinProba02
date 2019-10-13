@@ -16,10 +16,8 @@ fun main(args: Array<String>) {
     println("Sentence: $sentence   - contains ${countSubstr(sentence, subSentence)} time subSentence $subSentence")
 
     countSubstrings("input/substrings_in1.txt", listOf("РАЗНЫЕ", "ные", "Неряшливость", "е", "эволюция"))
-
-
-
 }
+
 fun countSubstrings(inputName: String, substrings: List<String>): Map<String, Int> {
 
     val resultSubstrCount = hashMapOf<String, Int>()
