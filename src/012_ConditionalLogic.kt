@@ -7,10 +7,10 @@ fun main(args: Array<String>){
             println("a large then b")
         }
     }
-    else if (a > b){            //условие не проверяется если предыдущая проверка {} = true
+    else if (a > b) {            //условие не проверяется если предыдущая проверка {} = true
         println("a > b")
     }
-    if(a < b){
+    if (a < b) {
         println("a < b")
     }
     else {                      // else should be вложенным - иначе ошибка как здесь
