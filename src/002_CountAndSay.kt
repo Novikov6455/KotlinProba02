@@ -1,3 +1,5 @@
+import org.junit.Test
+import kotlin.test.assertEquals
 
 /*
 The count-and-say sequence is the sequence of integers with the first five terms as following:
@@ -33,8 +35,8 @@ fun countAndSay(n: Int): String? {
             countDictionary[i] = nextString(countDictionary[i-1]!!)
         }
     }
-    println(countDictionary)
-    return countDictionary[n]
+//    println(countDictionary)
+    return countDictionary[n].toString()
 }
 
 fun nextString (inputString: String): String {
@@ -62,3 +64,11 @@ fun main() {
 //    println(nextString("111221"))   // "312211"
     println(countAndSay(10))
 }
+
+//class CountAndSayTest {
+//    @Test
+//    fun  countAndSayTest(){
+//        assertEquals("111221", countAndSay(5))
+//        assertEquals("13211311123113112211", countAndSay(10))
+//    }
+//}
